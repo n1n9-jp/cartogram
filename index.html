@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日本地図カルトグラム</title>
+    <meta charset="utf-8">
+    <meta property="og:image" content="placeholder.png">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>日本地図カルトグラム</h1>
+      <form>
+        <p>
+          <label>データ項目 <select id="field"></select></label>
+          <span id="status"></span>
+        </p>
+      </form>
+      <div id="map-container">
+        <img id="placeholder" alt="placeholder image for old browsers" src="assets/placeholder.png">
+        <svg id="map"></svg>
+      </div>
+      <div id="about">
+        <p>この日本のカルトグラムは、各都道府県の食材支出（米と食パン）に基づいて地図の面積を変形させています。
+        政府統計の社会・人口統計体系（SSDSE-C-2025）の食料品支出データを使用し、各都道府県の支出額に比例してその面積が表示されます。</p>
+        <p>データ項目を選択すると、選択した項目の年間支出額に応じて各都道府県の形状が変化します。</p>
+      </div>
+    </div>
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="assets/topogram.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
